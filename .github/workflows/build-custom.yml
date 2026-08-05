@@ -81,7 +81,7 @@ on:
 
 jobs:
   Build-Kernel:
-    name: "Build kernel with ${{ github.event.inputs.KSU }}"
+    name: "Build ${{ github.event.inputs.kernel_version }} kernel with ${{ github.event.inputs.KSU }}"
     runs-on: ubuntu-latest
     env:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
